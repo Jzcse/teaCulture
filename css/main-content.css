@@ -1,0 +1,132 @@
+.main-content-page{
+    height: 700px;
+    width: 100%;
+    background: #339933;
+    margin-top: 5px;
+}
+
+.toTop{
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    /* border: none; */
+    outline: none;
+    background: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* z-index: 99 */
+}
+
+/* .main-content{
+    margin-top:105px ;
+} */
+
+.main-content > #home{
+    height: 840px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.home-title{
+    width: 500px;
+    height: 300px;
+    background: #339933;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 180px;
+}
+
+#home-title-h2{
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#home-title-h3{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.subheading-box{
+    height: 50px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #009966;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.paragraph-box{
+    width: 65%;
+    height: 500px;
+    /* display: inline-block; */
+}
+
+.image-box{
+    width: 30%;
+    height: 500px;
+    /* display: inline-block; */
+    /* display: flex;
+    justify-content: center; */
+}
+
+.text{
+    display: flex;
+    align-items: flex-start;
+
+}
+
+/* #types-of-tea{
+    height: auto;
+} */
+
+#custom-of-tea{
+    height: 900px;
+}
+
+.more-information-a{
+    text-decoration: none;
+}
+
+.playMusic{
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+    /* border: none; */
+    outline: none;
+    background: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* z-index: 99 */
+    text-align: center;
+}
+
+.Baike{
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    bottom: 215px;
+    right: 50px;
+    /* border: none; */
+    outline: none;
+    background: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* z-index: 99 */
+    text-align: center;
+}

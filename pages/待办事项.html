@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #todo-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #todo-input {
+            flex-grow: 1;
+            padding: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+        }
+        .delete-btn {
+            background-color: #f44336;
+        }
+        .delete-btn:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <h1>待办事项列表</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="添加新的待办事项" required>
+        <button type="submit">添加</button>
+    </form>
+    <ul id="todo-list"></ul>
+
+    <script>
+        const form = document.getElementById('todo-form');
+        const input = document.getElementById('todo-input');
+        const todoList = document.getElementById('todo-list');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            addTodo();
+        });
+
+        function addTodo() {
+            if (input.value !== '') {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span>${input.value}</span>
+                    <button class="delete-btn">删除</button>
+                `;
+                todoList.appendChild(li);
+                input.value = '';
+
+                li.querySelector('.delete-btn').addEventListener('click', function() {
+                    todoList.removeChild(li);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
